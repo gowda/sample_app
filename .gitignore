@@ -30,3 +30,6 @@
 
 # Ignore rvm configuration for gemset
 .ruby-gemset
+
+# Ignore spring files
+/spring/*.pid

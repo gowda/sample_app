@@ -11,6 +11,11 @@ gem 'jbuilder', '2.7.0'
 group :development, :test do
   gem 'sqlite3', '1.3.13'
   gem 'byebug', '9.0.6', platforms: :mri
+
+  # readline installed by OSX can get upgraded & rvm ruby linked
+  # against old readline won't work. rb-readline removes ruby's
+  # dependence on older readline
+  gem 'rb-readline'
 end
 
 group :development do
