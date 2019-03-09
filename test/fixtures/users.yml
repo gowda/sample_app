@@ -3,25 +3,35 @@ tester:
   email: test-user@example.com
   password_digest: <%= User.digest("password") %>
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 exampler:
   name: Test Example User
   email: example-user@example.com
   password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 binner:
   name: Example Bin User
   email: bin-user@example.com
   password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 sbinner:
   name: Example Sbin User
   email: sbin-user@example.com
   password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 <% 30.times do |n| %>
 user_<%= n %>:
   name: <%= "User #{n}" %>
   email: <%= "user-#{n}@example.com" %>
   password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 <% end %>
